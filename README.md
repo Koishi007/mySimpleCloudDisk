@@ -17,3 +17,5 @@ server.config与client.config分别是服务端和客户端的配置，只有ip�
 以后有机会实现真正的主机间互相通信
 
 代码水平有限，请见谅
+
+QT5.14.2 MinGW32
