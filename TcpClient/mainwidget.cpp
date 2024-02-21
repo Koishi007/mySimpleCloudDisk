@@ -11,17 +11,20 @@
 
 
 
-MainWidget::MainWidget(QWidget *parent) :
+MainWidget::MainWidget(QWidget *parent) :    
     QWidget(parent),
-    m_File(new QFile),
-    m_timer(new QTimer),  
+    m_File(new QFile),   
+    m_timer(new QTimer),     
     ui(new Ui::MainWidget),
     m_drawer(new QtMaterialDrawer),
     m_bar(new QtMaterialAppBar),
     m_snkbar(new QtMaterialSnackbar),
     m_fileTable(new QTableWidget),
     m_circularProgressWidget(new framelessWidget),
-    m_shareSelectWidget(new shareSelectWidget)
+    m_shareSelectWidget(new shareSelectWidget),
+    m_ejectBtn(new QPushButton),
+    m_menu(new QMenu)
+
 {
     //ui->setupUi(this);
     this->setFixedSize(1000,600);
@@ -46,11 +49,10 @@ MainWidget::MainWidget(QWidget *parent) :
     m_menuLable->setPalette(palette);
     m_menuLable->setFont(QFont("微软雅黑", 18, QFont::Normal));
 
-    m_btn = new QPushButton;         //弹出栏按钮
-    m_btn->setStyleSheet(QStringLiteral("background-color: transparent; border: none;"));
-    m_btn->setIcon(QIcon(QStringLiteral(":/icon/resource/menuIcon.png")));
-    m_btn->setIconSize(QSize(64,64));
-    m_bar->appBarLayout()->addWidget(m_btn);
+    m_ejectBtn->setStyleSheet(QStringLiteral("background-color: transparent; border: none;"));
+    m_ejectBtn->setIcon(QIcon(QStringLiteral(":/icon/resource/menuIcon.png")));
+    m_ejectBtn->setIconSize(QSize(64,64));
+    m_bar->appBarLayout()->addWidget(m_ejectBtn);
     m_bar->appBarLayout()->addWidget(m_menuLable);
     m_bar->appBarLayout()->addStretch(1);
     QVBoxLayout *layout = new QVBoxLayout;
@@ -113,7 +115,6 @@ MainWidget::MainWidget(QWidget *parent) :
                              "QScrollBar{ background: white; width:5px}"
                              "QScrollBar::handle:vertical{ background-color: #86dbcb; min-height: 60px ;width:30px }"));
     m_fileTable->setContextMenuPolicy(Qt::CustomContextMenu);                 //右键菜单设置
-    m_menu = new QMenu;
     m_menu->setStyleSheet(QStringLiteral("QMenu::item {background : gray;border-color: gray;} "
                         "QMenu {background : gray;}"));
     m_menu->addAction(QStringLiteral("创建新文件夹"), this, &MainWidget::createDirQuest);
@@ -122,8 +123,7 @@ MainWidget::MainWidget(QWidget *parent) :
     m_menu->addAction(QStringLiteral("删除"), this, &MainWidget::removeQuest);
 
 
-
-    connect(m_btn, &QPushButton::pressed, m_drawer, &QtMaterialDrawer::openDrawer);
+    connect(m_ejectBtn, &QPushButton::pressed, m_drawer, &QtMaterialDrawer::openDrawer);
     connect(m_refreshDirBtn, &QPushButton::pressed, this, &MainWidget::refreshDirQuest);
     connect(m_goBackBtn, &QPushButton::pressed, this, &MainWidget::goBackDir);
     connect(m_fileTable, &MainWidget::customContextMenuRequested, this, &MainWidget::slotContextMenu);
@@ -146,7 +146,7 @@ MainWidget::~MainWidget()
     delete m_refreshDirBtn;
     delete m_uploadFileBtn;
     delete m_changeDownloadPathBtn;
-    delete m_btn;
+    delete m_ejectBtn;
     delete m_menu;
     delete m_downLoadPathLable;
     delete m_fileTable;

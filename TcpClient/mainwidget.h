@@ -97,7 +97,7 @@ private:
     QPushButton *m_uploadFileBtn;
     QPushButton *m_changeDownloadPathBtn;
     QPushButton *m_goBackBtn;
-    QPushButton *m_btn;                                   //弹出栏按钮
+    QPushButton *m_ejectBtn;                                   //弹出栏按钮
     QLabel *m_downLoadPathLable;
     framelessWidget *m_circularProgressWidget;
     shareSelectWidget *m_shareSelectWidget;
