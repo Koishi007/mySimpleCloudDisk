@@ -31,24 +31,24 @@ DEPENDPATH += $$PWD/sdk/include
 
 
 SOURCES += \
-    fileshareinfowidget.cpp \
+    fileShareInfoWidget.cpp \
     framelessWidget.cpp \
-    friendwidget.cpp \
+    friendWidget.cpp \
     main.cpp \
-    mainwidget.cpp \
-    operatewidget.cpp \
+    mainWidget.cpp \
+    operateWidget.cpp \
     protocol.cpp \
-    shareselectwidget.cpp \
+    shareSelectWidget.cpp \
     tcpclient.cpp
 
 HEADERS += \
-    fileshareinfowidget.h \
+    fileShareInfoWidget.h \
     framelessWidget.h \
-    friendwidget.h \
-    mainwidget.h \
-    operatewidget.h \
+    friendWidget.h \
+    mainWidget.h \
+    operateWidget.h \
     protocol.h \
-    shareselectwidget.h \
+    shareSelectWidget.h \
     tcpclient.h
 
 FORMS += \

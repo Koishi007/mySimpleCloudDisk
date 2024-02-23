@@ -17,7 +17,7 @@
 #include <QTimer>
 #include <QFile>
 #include "framelessWidget.h"
-#include "shareselectwidget.h"
+#include "shareSelectWidget.h"
 
 
 

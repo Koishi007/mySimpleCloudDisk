@@ -6,7 +6,7 @@
 #include <QString>
 #include <QTcpSocket>
 #include <QStackedWidget>
-#include "operatewidget.h"
+#include "operateWidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TcpClient; }

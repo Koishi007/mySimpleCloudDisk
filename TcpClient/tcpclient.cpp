@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QHBoxLayout>
 #include "protocol.h"
-#include "operatewidget.h"
+#include "operateWidget.h"
 
 
 TcpClient::TcpClient(QWidget *parent)

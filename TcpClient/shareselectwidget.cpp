@@ -1,6 +1,6 @@
-#include "shareselectwidget.h"
+#include "shareSelectWidget.h"
 #include "ui_shareselectwidget.h"
-#include "operatewidget.h"
+#include "operateWidget.h"
 #include <QSet>
 #include <QIcon>
 #include <QMessageBox>

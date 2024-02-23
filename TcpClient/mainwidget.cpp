@@ -1,4 +1,4 @@
-#include "mainwidget.h"
+#include "mainWidget.h"
 #include "ui_mainwidget.h"
 #include <QVBoxLayout>
 #include <QHeaderView>

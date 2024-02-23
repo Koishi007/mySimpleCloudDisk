@@ -5,7 +5,7 @@
 #include "qtmaterialappbar.h"
 #include "qtmaterialsnackbar.h"
 #include "qtmaterialdrawer.h"
-#include "fileshareinfowidget.h"
+#include "fileShareInfoWidget.h"
 #include "protocol.h"
 #include <QSet>
 #include <QTableWidget>
@@ -44,6 +44,7 @@ private slots:
     void on_message_btn_clicked();
     void on_show_message_drawer_btn_clicked();
     void on_refresh_btn_clicked();
+    void on_myself_msgbox_btn_clicked();
 
     void addFriendQuest();
     void initFriendTable();
@@ -52,8 +53,6 @@ private slots:
     void acceptAddFriend();
     void refuseAddFriend();
 
-
-    void on_myself_msgbox_btn_clicked();
 
 private:
     Ui::FriendWidget *ui;

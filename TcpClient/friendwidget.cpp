@@ -1,4 +1,4 @@
-#include "friendwidget.h"
+#include "friendWidget.h"
 #include "ui_friendwidget.h"
 #include "protocol.h"
 #include "tcpclient.h"

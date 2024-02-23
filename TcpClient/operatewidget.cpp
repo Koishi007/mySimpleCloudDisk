@@ -1,4 +1,4 @@
-#include "operatewidget.h"
+#include "operateWidget.h"
 #include "ui_operatewidget.h"
 #include "protocol.h"
 #include <QDebug>

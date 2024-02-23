@@ -1,8 +1,8 @@
-#include "fileshareinfowidget.h"
+#include "fileShareInfoWidget.h"
 #include "ui_fileshareinfowidget.h"
 #include "tcpclient.h"
 #include "protocol.h"
-#include "operatewidget.h"
+#include "operateWidget.h"
 
 void FileShareInfoWidget::initFileShareInfo(QString fileName, QString sender, qint64 fileSize)
 {

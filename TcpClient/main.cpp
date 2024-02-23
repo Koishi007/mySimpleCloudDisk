@@ -2,7 +2,7 @@
 
 #include <QApplication>
 
-#include <operatewidget.h>
+#include <operateWidget.h>
 
 #include "framelessWidget.h"
 

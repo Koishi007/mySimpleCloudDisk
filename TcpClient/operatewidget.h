@@ -2,8 +2,8 @@
 #define OPERATEWIDGET_H
 
 #include <QWidget>
-#include "friendwidget.h"
-#include "mainwidget.h"
+#include "friendWidget.h"
+#include "mainWidget.h"
 #include "downloadpathwidget.h"
 #include <QQueue>
 
